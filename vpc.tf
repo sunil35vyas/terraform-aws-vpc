@@ -1,12 +1,9 @@
 
-
 # aws test VPC
 resource "aws_vpc" "awstest" {
   cidr_block = "10.0.0.0/16"
   enable_dns_support = false
-  tags {
-    Name = "awstest"
-  }
+
 }
 
 
@@ -77,9 +74,6 @@ resource "aws_route_table" "awstest-public" {
     gateway_id = "${aws_internet_gateway.awstest-gw.id}"
   }
 
-  tags {
-    Name = "awstest-public-1"
-  }
 }
 
 # aws test RTA
@@ -115,9 +109,7 @@ resource "aws_route_table" "awstest-private" {
     nat_gateway_id = "${aws_nat_gateway.awstest-nat-gw.id}"
   }
 
-  tags {
-    Name = "awstest-private-1"
-  }
+
 }
 # vpc private routes
 resource "aws_route_table_association" "awstest-private-1-a" {

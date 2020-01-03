@@ -9,8 +9,8 @@ This terraform  will create
 # Getting started
 Make sure you have the latest terraform installed </br>
 Or download linux binary [here](https://releases.hashicorp.com/terraform/0.12.18/terraform_0.12.18_linux_amd64.zip) </br>
-Extract the binary to /usr/bin </br>
-Run  $ `/usr/bin/terraform init` </br>
+Extract the binary to /usr/bin and run </br>
+  $ `/usr/bin/terraform init` </br>
      $ `/usr/bin/terraform plan ` </br>
      $ `/usr/bin/terraform apply` </br> at the root direcotry of project </br>
 

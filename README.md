@@ -14,3 +14,4 @@ Extract the binary to /usr/bin and run </br>
      $ `/usr/bin/terraform plan ` </br>
      $ `/usr/bin/terraform apply` </br> at the root direcotry of project </br>
 
+![Modularized Flow ](https://github.com/sunil35vyas/terraform-aws-vpc/blob/master/modularized_flow.jpeg)

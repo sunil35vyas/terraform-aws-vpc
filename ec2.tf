@@ -1,4 +1,6 @@
 
+#Provisioning of EC2
+
 resource "aws_launch_template" "nginx-test" {
   name_prefix   = "nginx-test"
   image_id      = "ami-06d51e91cea0dac8d"
@@ -12,11 +14,13 @@ resource "aws_launch_template" "nginx-test" {
 
 }
 
+#autoscaling_group for EC2
+
 resource "aws_autoscaling_group" "scale" {
   desired_capacity   = 2
   max_size           = 4
   min_size           = 2
-  vpc_zone_identifier = ["${aws_subnet.awstest-private-1.id}", "${aws_subnet.awstest-private-2.id}"]
+  vpc_zone_identifier = ["${aws_subnet.awstest-private-1.id}", "${aws_subnet.awstest-private-2.id}","${aws_subnet.awstest-private-2.id}"]
   launch_template {
     id      = "${aws_launch_template.nginx-test.id}"
     version = "$Latest"
